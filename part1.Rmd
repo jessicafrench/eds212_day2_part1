@@ -37,9 +37,9 @@ dg_dz <- D(gz, 'z')
 #evaluate the slope over a range of values
 
 z <- seq(from = -3, to = 4, by = 0.5)
-# Evaluate at the range of values0
+# Evaluate at the range of values
 
 eval(dg_dz)
 ```
 
-
+Hello these are some words to demonstrate something about github. 
