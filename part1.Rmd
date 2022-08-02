@@ -9,4 +9,37 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## Derivatives in R
+- find the derivative of $f(x) = 5x^2$
+```{r}
+example_1 <- expression(5 * x ^ 2) #What does expression do tells other R functions that you are using a mathmatical expression. Creates an acceptable input for other functions i.e deriv. Allows an unevaluated expression.
+
+my_derivative <- deriv(example_1, "x") #in parentheses is the variable you are finding the derivative of
+
+my_derivative
+
+# Example find the slipe at x = 2.8
+
+x <- 2.8 # assign x the value. 
+eval(my_derivative)
+
+```
+
+## Using the capital D function for derivatives
+
+- find the slope of $g(z) = 2z^3-10.5z^2+4.1$
+
+```{r}
+gz <- expression(2 * z ^ 3 - 10.5 * z ^ 2 + 4.1)
+
+dg_dz <- D(gz, 'z')
+
+#evaluate the slope over a range of values
+
+z <- seq(from = -3, to = 4, by = 0.5)
+# Evaluate at the range of values0
+
+eval(dg_dz)
+```
+
 
