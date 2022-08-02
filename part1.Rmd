@@ -43,3 +43,4 @@ eval(dg_dz)
 ```
 
 Hello these are some words to demonstrate something about github. 
+Im only writing this so we can practice commit and push
