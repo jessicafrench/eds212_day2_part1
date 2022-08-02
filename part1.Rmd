@@ -1,0 +1,12 @@
+---
+title: "EDS_212_day2_part1"
+author: "Jessica French"
+date: "2022-08-02"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
