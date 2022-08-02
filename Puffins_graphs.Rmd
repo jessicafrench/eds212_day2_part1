@@ -16,7 +16,12 @@ library(palmerpenguins)
 
 ```{r}
 ggplot(data = penguins, aes(x = body_mass_g, y = flipper_length_mm)) +
-  geom_point(aes(color = species)) # aes(color = specoies) makes color dependent on species, aes for changing things based on varibales only. 
+  geom_point(aes(color = species), size = 4) + # aes(color = specoies) makes color dependent on species, aes for changing things based on varibales only. 
+  facet_wrap(~island) +
+  theme_minimal() +
+  labs(x = "Body mass (g)",
+       y = "Flipper length (mm)") 
+      
   
 
 ```
