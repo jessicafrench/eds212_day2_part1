@@ -370,7 +370,55 @@ pre code {
 </div>
 
 
+<p>A change that will allow me to save and see if the file path is
+okay</p>
+<div id="derivatives-in-r" class="section level2">
+<h2>Derivatives in R</h2>
+<ul>
+<li>find the derivative of <span class="math inline">\(f(x) =
+5x^2\)</span></li>
+</ul>
+<pre class="r"><code>example_1 &lt;- expression(5 * x ^ 2) #What does expression do tells other R functions that you are using a mathmatical expression. Creates an acceptable input for other functions i.e deriv. Allows an unevaluated expression.
 
+my_derivative &lt;- deriv(example_1, &quot;x&quot;) #in parentheses is the variable you are finding the derivative of
+
+my_derivative</code></pre>
+<pre><code>## expression({
+##     .value &lt;- 5 * x^2
+##     .grad &lt;- array(0, c(length(.value), 1L), list(NULL, c(&quot;x&quot;)))
+##     .grad[, &quot;x&quot;] &lt;- 5 * (2 * x)
+##     attr(.value, &quot;gradient&quot;) &lt;- .grad
+##     .value
+## })</code></pre>
+<pre class="r"><code># Example find the slipe at x = 2.8
+
+x &lt;- 2.8 # assign x the value. 
+eval(my_derivative)</code></pre>
+<pre><code>## [1] 39.2
+## attr(,&quot;gradient&quot;)
+##       x
+## [1,] 28</code></pre>
+</div>
+<div id="using-the-capital-d-function-for-derivatives" class="section level2">
+<h2>Using the capital D function for derivatives</h2>
+<ul>
+<li>find the slope of <span class="math inline">\(g(z) =
+2z^3-10.5z^2+4.1\)</span></li>
+</ul>
+<pre class="r"><code>gz &lt;- expression(2 * z ^ 3 - 10.5 * z ^ 2 + 4.1)
+
+dg_dz &lt;- D(gz, &#39;z&#39;)
+
+#evaluate the slope over a range of values
+
+z &lt;- seq(from = -3, to = 4, by = 0.5)
+# Evaluate at the range of values
+
+eval(dg_dz)</code></pre>
+<pre><code>##  [1] 117  90  66  45  27  12   0  -9 -15 -18 -18 -15  -9   0  12</code></pre>
+<p>Hello these are some words to demonstrate something about github. Im
+only writing this so we can practice commit and push</p>
+</div>
 
 
 
