@@ -5,6 +5,8 @@ date: "2022-08-02"
 output: html_document
 ---
 
+Edit through git hub
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
