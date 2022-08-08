@@ -5,6 +5,7 @@ date: "2022-08-02"
 output: html_document
 ---
 A change that will allow me to save and see if the file path is okay
+Making a change in Git hub for terminal stuff
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
