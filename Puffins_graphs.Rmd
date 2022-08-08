@@ -6,6 +6,7 @@ output: html_document
 ---
 
 Edit through git hub
+Now edit through R studio
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
